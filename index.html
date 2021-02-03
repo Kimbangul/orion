@@ -4,21 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ORION</title>
-    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+   
     <!-- custom js, css -->
     
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js"></script>
 </head>
 <body>
+    <!-- header start -->
     <header>
-        <nav class="flex  flex-jc-c">
+        <nav class="flex  flex-jc-c prohibit-drag">
             <div class="logo img-box flex"><a class="flex flex-ai-c" href="/"><img src="img/logo.png" alt="orion logo"></a></div>
             <ul class="depth-1 flex flex-1-0-0 flex-jc-c">
-                <li class="flex"><a class="flex flex-ai-c" href="#">COMPANY</a></li>
-                <li class="flex"><a class="flex flex-ai-c" href="#">NEWS</a></li>
-                <li class="flex"><a class="flex flex-ai-c" href="#">PRODUCT</a></li>
-                <li class="flex"><a class="flex flex-ai-c" href="#">CUSTOMER</a></li>
+                <li class="flex"><a class="flex flex-ai-c" href="#">COMPANY</a>
+                    <ul class="depth-2">
+                        <li><a href="#">오리온 소개</a></li>
+                        <li><a href="#">오리온 역사관</a></li>
+                        <li><a href="#">오리온 사업영역</a></li>
+                        <li><a href="#">IR정보</a></li>
+                        <li><a href="#">오시는 길</a></li>
+                    </ul>
+                </li>
+                <li class="flex"><a class="flex flex-ai-c" href="#">NEWS</a>
+                <ul class="depth-2">
+                    <li><a href="#">보도자료</a></li>
+                    <li><a href="#">채용공고</a></li>
+                </ul>
+                </li>
+                <li class="flex"><a class="flex flex-ai-c" href="#">PRODUCT</a>
+                    <ul class="depth-2">
+                        <li><a href="#">신제품</a></li>
+                        <li><a href="#">오리온 파워브랜드</a></li>
+                        <li><a href="#">Market O</a></li>
+                        <li><a href="#">Dr. you</a></li>
+                        <li><a href="#">제주용암수</a></li>
+                    </ul>
+                </li>
+                <li class="flex"><a class="flex flex-ai-c" href="#">CUSTOMER</a>
+                <ul class="depth-2">
+                    <li><a href="#">고객의 소리(VOC)</a></li>
+                    <li><a href="#">불만 접수(Claim)</a></li>
+                    <li><a href="#">의견 접수(Idea)</a></li>
+                    <li><a href="#">자주 묻는 질문</a></li>
+                    <li><a href="#">영업소 위치</a></li>
+                </ul></li>
+                <li class="flex"><a class="flex flex-ai-c" href="#">CHOCOPIE HOUSE</a>
+                    <ul class="depth-2">
+                        <li><a href="#">제품 소개</a></li>
+                        <li><a href="#">점포 안내</a></li>
+                    </ul>
+                </li>
             </ul>
             <ul class="lang flex">
                 <li class="flex"><button class="active">KR</button></li>
@@ -26,11 +63,19 @@
             </ul>
         </nav>
     </header>
+    <!-- header end -->
     <div class="wrap">
+        <!--main slide start -->
         <section id="slide">
-            <div class="img-slide"></div>
+            <div class="img-slide prohibit-drag">
+                <div class="text-box">즐거움과 행복이 가득한<br>오리온 그룹!
+                    <br><span>세계 속의 오리온을 만들어 가는 힘입니다.</span>
+                </div>
+                
+            </div>
         </section>
-
+        <!-- main slide end -->
+        <!-- introduction start -->
         <section id="introduction">
             <div class="con">
                 <div class="row">
@@ -51,7 +96,8 @@
                 </ul>
             </div>
         </section>
-
+        <!-- introduction end -->
+        <!-- product start -->
         <section id="product">
             <h3 class="title">PRODUCT</h3>
             <div class="con">
@@ -67,6 +113,8 @@
             </div>
 
         </section>
+        <!-- product end -->
+        <!-- new product start -->
         <section id="new-product">
             <h3 class="title">NEW PRODUCT</h3>
             <div class="con">
@@ -90,6 +138,8 @@
             
 
         </section>
+        <!-- new product end -->
+        <!-- news start -->
         <section id="news">
             <div class="con">
                 <div class="row">
@@ -124,6 +174,8 @@
                 <a href="#">VIEW THE ALL NEWS</a>
             </div>
         </section>
+        <!-- news end -->
+        <!-- link start -->
         <section id="link">
             <div class="con">
                 <div class="row">
@@ -133,13 +185,15 @@
                 </div>
             </div>
         </section>
-
-        <aside>
+        <!-- link end -->
+        <!--fixed menu start -->
+        <aside id = "fixed-menu">
             <div class="top">TOP</div>
-            <div class="customer">고객센터</div>
-            <div class="qr-code">QR코드</div>
+            <div class="voc">고객센터</div>
+            <div class="voc-qr-code">QR코드</div>
         </aside>
-
+        <!-- fixed menu end -->
+        <!-- footer start -->
         <footer>
             <div class="con">
                 <div class="row">
@@ -166,6 +220,7 @@
             </div>
 
         </footer>
+        <!-- footer end -->
     </div>
 </body>
 </html>
