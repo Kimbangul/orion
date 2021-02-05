@@ -366,6 +366,14 @@ section#introduction > div.con {
   max-width: 1400px;
   margin: 200px auto; }
   section#introduction > div.con > div.row > div.img-box {
-    width: 90px; }
+    width: 100px; }
+  section#introduction > div.con > div.row > p {
+    font-family: 'nanumsquare','Noto Sans KR', sans-serif;
+    margin: 30px 0;
+    font-size: 1.8em;
+    text-align: center; }
+    section#introduction > div.con > div.row > p > span {
+      color: #ed1c2a;
+      font-weight: 900; }
 
 /*# sourceMappingURL=style.css.map */

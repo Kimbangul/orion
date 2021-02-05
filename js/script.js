@@ -35,8 +35,8 @@ $(document).ready(function(){
         console.log($mainSlide);
         
         var $mainSlideList = [
-            '../img/slide/slide1_darken.png',
-            '../img/slide/slide2.jpg'
+            'img/slide/slide1_darken.png',
+            'img/slide/slide2.jpg'
         ];
 
         $mainSlide.each(function (index, item){

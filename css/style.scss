@@ -152,6 +152,8 @@ header{
     background-color: #fff;
     z-index: 999;  
 
+
+
     & > nav{
         max-width: 1920px;
         margin: 0 auto;
@@ -505,7 +507,19 @@ section#introduction{
 
         & > div.row{
             & > div.img-box{
-                width: 90px;
+                width: 100px;
+            }
+
+            & > p{
+                font-family: 'nanumsquare','Noto Sans KR', sans-serif;
+                margin: 30px 0;
+                font-size: 1.8em;
+                text-align: center;
+
+                & > span{
+                    color: $point-color;
+                    font-weight: 900;
+                }
             }
         }
     }
