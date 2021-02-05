@@ -363,6 +363,9 @@ section#slide {
         white-space: nowrap; }
 
 section#introduction > div.con {
-  margin: 0 200px; }
+  max-width: 1400px;
+  margin: 200px auto; }
+  section#introduction > div.con > div.row > div.img-box {
+    width: 90px; }
 
 /*# sourceMappingURL=style.css.map */

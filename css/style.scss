@@ -11,7 +11,7 @@
 
 // variable start
 
-$max-width: 1280px;
+$max-width: 1400px;
 $border-color : rgba(0,0,0,0.15);
 $point-color: rgb(237,28,42);
 $secondary-color: rgb(85,30,34);
@@ -499,7 +499,15 @@ section#slide{
 section#introduction{
 
     & > div.con{
-        margin: 0 200px;
+        max-width: $max-width;        
+        margin: 200px auto;
+        
+
+        & > div.row{
+            & > div.img-box{
+                width: 90px;
+            }
+        }
     }
 
 }
