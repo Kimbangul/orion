@@ -99,6 +99,14 @@ a, img{
         user-select: none;
     }
 
+    .title{
+
+        padding: 35px 0;
+        font-size: 3rem;
+        font-weight: 900;
+
+    }
+
 // lib end
 
 // animation start
@@ -519,7 +527,7 @@ section#introduction{
         margin: 200px auto;
         
 
-        & > div.row{
+        & > div.row:first-child{
             & > div.img-box{
                 width: 100px;
                 transform: scale(0);
@@ -533,25 +541,183 @@ section#introduction{
             }
 
             & > p{
-                font-family: 'nanumsquare','Noto Sans KR', sans-serif;
-                margin: 30px 0;
-                font-size: 1.8em;
+                font-family: 'Noto Sans KR', sans-serif;
+                min-height: 50px;
+                margin: 30px auto;
+                font-size: 1.6em;
+                font-weight: 400;
                 text-align: center;
+             
 
-                &::before{
-                    content: " ";
-                    display: inline-block;
-                }
 
                 & > span{
                     color: $point-color;
-                    font-weight: 900;
+                    
                 }
             }
         }
+
+        & > div.row:nth-child(2){
+            margin-top: 50px;
+            & > ul.social{
+                & > li{
+                    margin: 0 5px;
+
+                    & > a{
+                        opacity: 0.6;
+                        transition: opacity 0.3s;
+                        & > img{
+                            width: 50px;
+                        }
+
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+
+
     }
 
 }
 
 
 // introduction end
+// product start
+
+section#product{
+    & div.con{
+        max-width: $max-width;
+        margin: 0 auto;
+
+        & > div.row{
+            
+            width: 100%;
+
+            & > div.cell{
+                height: 100%;
+                padding: 7px;
+                & > a{
+                    width: 100%;
+                    height: 100%;
+                    background-color: indianred;
+                }
+            }
+            
+
+            &:first-of-type{
+               
+
+                & > div.cell{                    
+                  height: 700px;
+                
+                }
+            }
+            &:nth-of-type(2){
+             
+                & > div.cell{
+                  
+                    
+                    
+                    & > a{
+                      
+                    }
+
+
+                }
+            }
+
+        }
+    }
+}
+
+// product end
+
+// new product start
+section#new-product{
+    & > div.con{
+        margin: 0 auto;
+        max-width: $max-width;
+
+        & > div.row{
+            width: 100%;
+            & > div.cell{
+             width: 100%;
+             height: 380px;
+             padding: 0 7px;
+
+             & > a{
+                 width: 100%;
+                 height: 100%;
+                 background-color: $secondary-color;
+             }
+            }
+        }
+    }
+}
+
+
+// new product end
+
+
+
+// news start
+
+    section#news{
+
+        & > div.con{
+            
+            margin: 0 auto;
+
+            & > div.row{
+                & > a{
+                    width: 100%;
+                    height: 450px;
+                    background: $secondary-color-2;
+                    margin: 0 7px;
+                }
+            }
+        }
+
+
+
+    }
+
+
+// news end
+// link start
+
+section#link{
+    & > div.con{
+        max-width: $max-width;
+        margin: 0 auto;
+       
+        & > div.row{
+            & > div.cell{
+                width: 100%;
+                height: 430px;
+                margin: 0 7px;
+                background: $secondary-color;
+            }
+        }
+
+
+
+    }
+}
+
+// link end
+// footer start
+
+footer{
+    
+    width: 100%;
+    height: 500px;
+    margin-top: 200px;
+    padding: 0 30px;
+    background-color: $secondary-color;
+}
+
+//footer end

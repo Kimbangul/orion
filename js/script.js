@@ -74,63 +74,81 @@ $(document).ready(function () {
                 });
             }
 
-            function typingEffect_init() {
+                 function typingEffect_init() {
 
-                function type(targetElements, $text) {
-                    console.log('typed'); //debug code
-                    TypeHangul.type(targetElements, {
-                        text: $text,
-                        intervalType: 30,
-                        append: true
-                    });
-                }
 
-                function typingEffect1() {
-                    var target = 'section#introduction > div.con > div.row > p.line1';
-                    var line1 = document.querySelector('section#introduction > div.con > div.row > p.line1');                 
-                    var line2 = document.querySelector('section#introduction > div.con > div.row > p.line2');
-                    var findStr = '정타임';
-                    var strStart = line2.innerHTML.indexOf(findStr);
-                    
+                    var i = 0;
+                    var textnum = 0; 
+                    var text = [
+                        '서로간의 정이 새록새록 솟아나는 초코파이!',
+                        '정타임을 함께하면 우리들의 마음은 하나가 됩니다.',                  
+    
+                    ]
+                    var completeText = 
+                    '서로간의 정이 새록새록 솟아나는 초코파이! <br> <span>정타임</span>을 함께하면 우리들의 마음은 하나가 됩니다.';
 
-                    function text1() {
-                        console.log('line 1 end'); //debug code
-
-                        var target = 'section#introduction > div.con > div.row > p.line2';
-                        type(target, '정타임을 함께하면 우리들의 마음은 하나가 됩니다.');
-
-                        line2.addEventListener('th.endType',function(){
-                            if (strStart != -1);{
-                                console.log('find!');//debug code
-
-                                // var strEnd = line2.innerHTML.indexOf('임');
-                                // var strArr = Array.from(line2.innerHTML);
-                                // console.log(strEnd);//debug code
+                    var tag = [
+                        '<br>',
+                        '',                    
+                    ]             
+    
+                    var tg = $('#introduction p.line1');                
+    
+    
+                    function insertTag(insertToTag , target){                    
+                       existHtml = tg.html();
+                       var newHtml = existHtml + insertToTag;
+                       target.html(newHtml);
+                        
+                    }
+    
+                    function typeEffect(target){  
+    
+                        function typeLine(){
+                            if (i < textToWrite.length){   
+    
+                                var  existHtml = tg.html();                  
+    
+                                target.html(existHtml+=textToWrite[i]);
+                                // 한 글자씩 타이핑한다.
+                                i++;
                                 
-                                // for(var i = strStart; i<=strEnd; i++){
-                                //     strArr[i].
-                                // }
-
+                                setTimeout(typeLine, 70);                        
+        
                             }
-                            
-                            line2.removeEventListener('th.endType',this);
-
-                        });
-
-
-
-                        line1.removeEventListener('th.endType', text1);
-
+                            else if (i = textToWrite.length){
+                                
+                                insertTag(tag[textnum], target);
+                                //  한 줄 타이핑이 끝나고 나서 태그 삽입
+    
+                                i = 0;
+                                textnum++;
+                                setTimeout(typeEffect, 200, target); 
+                            }
+                        }
+                        
+                        if (textnum < text.length){ 
+                            //  글자 수
+                           var textToWrite = text[textnum];
+    
+    
+                            typeLine();
+                        
+    
+                        }         
+                        else if(textnum = text.length){
+                            target.html(completeText);
+                        }                                                    
+                        
                     }
+    
+                 
+                    typeEffect(tg);        
+    
+                    
+                     }
+            
 
-
-
-                        type(target, '서로간의 정이 새록새록 솟아나는 초코파이!'); 
-                        line1.addEventListener('th.endType', text1);
-                    }
-
-                        typingEffect1();
-                    }
 
                     function scrollMagic_init() {
                         var controller = new ScrollMagic.Controller();
@@ -140,6 +158,7 @@ $(document).ready(function () {
                             var target1 = " section#introduction > div.con > div.row > div.img-box, section#introduction > div.con > div.row > p";
 
                             var scene1 = new ScrollMagic.Scene({
+                                    reverse: false,
                                     triggerElement: "section#introduction > div.con ",
                                     triggerHook: 0.5, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
                                     offset: -200,
@@ -150,7 +169,8 @@ $(document).ready(function () {
                                 .addTo(controller) // 컨트롤러 등록                
                                 .addIndicators({
                                     name: "ani1"
-                                });
+                                })             
+                                .on("start end",  typingEffect_init );             
 
 
                         }
@@ -164,6 +184,6 @@ $(document).ready(function () {
                     slideImg_init();
                     slickSlide_init();
                     scrollMagic_init();
-                    typingEffect_init();
+                  
 
                 });
