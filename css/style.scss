@@ -16,6 +16,8 @@ $border-color : rgba(0,0,0,0.15);
 $point-color: rgb(237,28,42);
 $secondary-color: rgb(85,30,34);
 $secondary-color-2: rgb(255,224,115);
+$secondary-color-3: rgb(236,236,236);
+$secondary-color-4: #999;
 $font-color: rgba(0,0,0,0.6);
 
 
@@ -42,12 +44,32 @@ a, img{
     display: block;
 }
 
-.slick-slide{
-    outline: none;
+
+
+.slick-list{
+    height: 100%;
+    & > .slick-track{
+        height: 100%;
+
+        & > .slick-slide{
+            height: 100%;
+            outline: none ;
+
+            &:focus{
+                outline: none;
+                
+            }
+
+            & > a:focus{
+                outline: none;
+            }
+        }
+    }
 }
 
 .slick-slider, .slick-list, .slick-track{
     height: 100%;
+ 
 }
 
 // lib start
@@ -101,9 +123,20 @@ a, img{
 
     .title{
 
-        padding: 35px 0;
+        
         font-size: 3rem;
         font-weight: 900;
+
+    }
+
+    
+    .sub-description{
+        padding: 10px 0 70px 0;
+        
+        text-align: center;
+        font-size: 1.4rem;
+        color: $secondary-color-4;
+        
 
     }
 
@@ -599,16 +632,35 @@ section#product{
             & > div.cell{
                 height: 100%;
                 padding: 7px;
+               
+                overflow: hidden;
+
                 & > a{
                     width: 100%;
                     height: 100%;
-                    background-color: indianred;
+                    
+
+                 
+
+                        & > div.img-box{
+                            width: 100%;
+                            height: 100%;
+
+                            & > img{
+                                height: 100%;
+                                object-fit: cover;
+                                border-radius:50px;
+                            }
+                            
+                        }
+                     
+                    
                 }
             }
             
 
             &:first-of-type{
-               
+            //    row 1
 
                 & > div.cell{                    
                   height: 700px;
@@ -616,14 +668,15 @@ section#product{
                 }
             }
             &:nth-of-type(2){
-             
+
+
+            //  row 2
+            height: 700px;
                 & > div.cell{
-                  
+                  height: 50%;
                     
                     
-                    & > a{
-                      
-                    }
+
 
 
                 }
@@ -637,21 +690,76 @@ section#product{
 
 // new product start
 section#new-product{
+    margin: 200px 0;
     & > div.con{
         margin: 0 auto;
         max-width: $max-width;
 
         & > div.row{
             width: 100%;
-            & > div.cell{
+
+            & ul.slick-dots{
+                & > li{
+                    margin: 0 5px;
+                    width: auto;
+                    height: auto;
+
+
+
+
+
+                    & > button{
+                        
+                        width: 16px;
+                        height: 16px;
+                        border-radius: 8px;
+                        background-color: $secondary-color-3;
+                        transition: background-color 0.3s, width 0.3s;
+
+                        &::before{
+                            content: " ";
+                            display: none;
+                        }
+                    }
+
+                    &.slick-active{
+                        & > button{
+                            width: 40px;
+                            background-color: $point-color;
+                            opacity: 0.7;
+                            
+                        }
+                    }
+                }
+            }
+
+            & .slick-list{
+                width: 100%;
+                
+            }
+
+
+
+            &  div.cell{
              width: 100%;
              height: 380px;
              padding: 0 7px;
 
              & > a{
                  width: 100%;
-                 height: 100%;
-                 background-color: $secondary-color;
+                 height: 100%;                 
+
+                & > div.img-box{
+                    width: 100%;
+                    height: 100%;
+                    & > img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50px;
+                    }
+                }
+
              }
             }
         }
@@ -672,11 +780,73 @@ section#new-product{
             margin: 0 auto;
 
             & > div.row{
+                width: 100%;
+                height: auto;
                 & > a{
-                    width: 100%;
-                    height: 450px;
+                    width: 33.3%;
+                    height: 0;                   padding-bottom: 60%;
+                    position: relative;
+                    overflow: hidden;
+                    padding-bottom: 33.3%;
+                   
                     background: $secondary-color-2;
                     margin: 0 7px;
+
+                    & > div.cell{
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        
+                      
+                        & > div.img-box{
+                            width: 100%;
+                            height: 50%;
+                            overflow: hidden;
+                            
+                            background-color: #fff;
+                            // box-shadow: 5px 5px 5px $secondary-color-3;
+
+                            & > img{
+                                width: 100%;
+                                height: 100%;
+                                object-fit: contain;
+                            
+                            }
+                            
+                        }
+                        & > div.text-box{
+                          height: 50%;
+                            padding:  20px;
+                            font-size: 1.6em;
+                            overflow: hidden;    
+
+
+                            & > h4.news-title{
+                               
+                                text-align: center;
+                                font-size: 1.4em;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                
+                            }
+
+                            & > div.date{
+                                margin: 10px 0  20px 0;
+                                font-size: 0.9em;
+                              
+                                text-align: right;
+                            }
+
+                            & > p{
+                                white-space: nowrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -690,6 +860,7 @@ section#new-product{
 // link start
 
 section#link{
+    margin: 200px 0;
     & > div.con{
         max-width: $max-width;
         margin: 0 auto;

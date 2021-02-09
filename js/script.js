@@ -72,6 +72,26 @@ $(document).ready(function () {
                     draggable: true
 
                 });
+
+                $('section#new-product > div.con > div.row').slick({
+                    slide: 'div.cell',
+
+                    infinite: true,                    
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    speed: 1000,  
+                    prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
+                    nextArrow: "<button type='button' class='slick-next'><img src='img/arrow.png' alt='다음 슬라이드로'></button>",
+                    dots: true,
+                    autoplay: true,
+                    autoplaySpeed: 5000,
+                    pauseOnHover: false,
+                    vertical: false,
+                    dotsClass: "slick-dots",
+                    draggable: true,
+                    adaptiveHeight: true
+
+                });
             }
 
                  function typingEffect_init() {
