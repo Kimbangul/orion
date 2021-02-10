@@ -51,7 +51,7 @@ $(document).ready(function () {
 
             function slickSlide_init() {
 
-
+// main slide
                 $('section#slide > div.con').slick({
                     slide: '.img-slide',
 
@@ -72,17 +72,18 @@ $(document).ready(function () {
                     draggable: true
 
                 });
+                
+                // new product slide
 
-                $('section#new-product > div.con > div.row').slick({
+                $('section#new-product > div.con > div.row:first-of-type').slick({
                     slide: 'div.cell',
 
                     infinite: true,                    
                     slidesToShow: 2,
                     slidesToScroll: 1,
-                    speed: 1000,  
-                    prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
-                    nextArrow: "<button type='button' class='slick-next'><img src='img/arrow.png' alt='다음 슬라이드로'></button>",
+                    speed: 1000,                     
                     dots: true,
+                    arrows: false,
                     autoplay: true,
                     autoplaySpeed: 5000,
                     pauseOnHover: false,
@@ -90,6 +91,28 @@ $(document).ready(function () {
                     dotsClass: "slick-dots",
                     draggable: true,
                     adaptiveHeight: true
+
+                });
+
+
+                // news slide
+
+                $('section#news > div.con > div.row').slick({
+                    slide: 'a',
+                    infinite: true,                    
+                    slidesToShow: 3,
+                    slidesToScroll: 1,
+                    speed: 1000,  
+                    prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
+                    nextArrow: "<button type='button' class='slick-next'><img src='img/arrow.png' alt='다음 슬라이드로'></button>",
+                    dots: true,
+                    autoplay: true,
+                    centerMode: true,
+                    autoplaySpeed: 7000,
+                    pauseOnHover: false,
+                    vertical: false,
+                    dotsClass: "slick-dots",
+                    draggable: true
 
                 });
             }
