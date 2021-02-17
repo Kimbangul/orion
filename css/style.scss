@@ -396,9 +396,11 @@ header{
 
         // depth 1
         & > ul.depth-1{
+
             & > li{
                 position: relative;
                 z-index: 10;
+                white-space: nowrap;
 
                 &::after{
                     content: " ";
@@ -1228,7 +1230,7 @@ section#link{
                     &:hover{
                         & > a{
                            
-                            transform: scale(1.15);
+                            transform: scale(1.05);
                         }
                     }
                 }
@@ -1392,3 +1394,26 @@ aside#fixed-menu{
 }
 
 // fixed menu end
+// 반응형 옵션
+
+@media (max-width: 1440px){
+    header{
+        font-size: 2em;
+
+        & > nav{
+            padding: 0 30px;
+
+            & > ul.depth-1{
+                & > li{
+                    & > a{
+                        padding: 10px 35px;
+                }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1080px){
+
+}
