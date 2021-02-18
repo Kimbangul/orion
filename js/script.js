@@ -14,11 +14,13 @@ $(document).ready(function () {
         
                 function naviMenuOpen() {
                     $nav.addClass('active');
+                   
                     $navMenuDepth2.stop().slideDown(300);
                 }
         
                 function naviMenuClose() {
                     $nav.removeClass('active');
+                   
                     $navMenuDepth2.stop().slideUp(300);
                 }
         
@@ -72,9 +74,11 @@ $(document).ready(function () {
     
                 function mbMenuOpen(){
                     $mbMenuDepth1.addClass("on");
+                    $('body').addClass('darken');
                 }
                 function mbMenuClose(){
                     $mbMenuDepth1.removeClass("on");
+                    $('body').removeClass('darken');
                 }
     
                     
@@ -185,7 +189,8 @@ $(document).ready(function () {
         $('section#news > div.con > div.row').slick({
             slide: 'a',
             infinite: true,
-            slidesToShow: 3,
+            slidesToShow: 1,
+            centerPadding: '35%',
             slidesToScroll: 1,
             speed: 1000,
             prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
@@ -202,7 +207,7 @@ $(document).ready(function () {
             responsive:[              
                 {
                     breakpoint: 1080, 
-                    settings: { slidesToShow: 3,   centerPadding: '20%'}
+                    settings: { slidesToShow: 1,   centerPadding: '15%'}
                 }
             ]
 

@@ -40,6 +40,7 @@ html,body{
     font-family: 'Roboto', 'Noto Sans KR', sans-serif;
     font-size: 10px;
     overflow-x: hidden;
+    background: #fff;
 }
 
 a, img{
@@ -320,6 +321,7 @@ body.on{
 }
 
 
+
 // body end
 
 // section
@@ -335,6 +337,8 @@ section{
 header{
     width: 100%;
     position: fixed;
+    top: 0;
+    left: 0;
     font-size: 2.4em;
     background-color: transparent;
     z-index: 999;  
@@ -1418,6 +1422,10 @@ aside#fixed-menu{
     section:not(#slide, #news) > div.con{
         padding: 0 20px;
     }
+    footer{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 
 }
 
@@ -1460,6 +1468,27 @@ aside#fixed-menu{
     html,body{
         font-size: 9px;
     }
+
+
+    // body.darken:not(header > nav > ul.depth-1.on){
+    //     filter: brightness(0.5);
+    // }
+    
+// div.wrap{
+//     &.darken{
+//         &::after{
+//             content: " ";
+//             display: block;
+//             width: 100%;
+//             height: 100%;
+//             position: fixed;
+//             z-index: 900;
+//             top: 0;
+//             left: 0;
+//             background: rgba(0,0,0,0.5);
+//         }
+//     }
+// }
 
     header{
         background-color: #fff;
@@ -1508,7 +1537,7 @@ aside#fixed-menu{
                 
                 visibility: hidden;
                 position: fixed;
-                z-index: 1001;
+                z-index: 1005;
                 top: 0;
                 left: -100%;
                 width: 60%;
@@ -1524,6 +1553,8 @@ aside#fixed-menu{
                     left: 0;
 
                     transition: visibility 0s, left 0.5s 0s;
+
+
                 }
 
 
@@ -1640,10 +1671,62 @@ aside#fixed-menu{
                         display: flex;
 
                         & > div.img-box{
+                            flex-basis: 50%;
                             height: 100%;
                         }
                         & > div.text-box{
+                            flex-basis: 50%;
                             height: 100%;
+                        }
+                    }
+                }
+
+                & .slick-list{
+                    overflow: visible;
+                    & .slick-slide{
+                        &.slick-center{
+                            transform: scale(1);
+                        }
+                    }
+                }
+
+                & .slick-dots{
+                    bottom: -60px;
+                }
+            }
+
+            & > a.link-btn{
+                margin-top: 80px;
+            }
+        }
+    }
+
+    section#link{
+        & > div.con{
+            & > div.row{
+                & > div.cell{
+                    margin: 0 3.5px;
+                    & > a{
+                        & > div.img-box{
+                            margin-top: 0;
+                            width: 40%;
+                        }
+
+                        & > h2.title{
+                            // font-size: 3rem;
+                        }
+
+                        & > p.sub-description{
+                            display: none;
+                        }
+                    }
+
+                    &:nth-of-type(2){
+                        & > a{
+                            & > div.img-box{
+                               width: 33%;
+                                // transform: scale(0.8);
+                            }
                         }
                     }
                 }

@@ -18,7 +18,8 @@
 html, body {
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   font-size: 10px;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  background: #fff; }
 
 a, img {
   display: block; }
@@ -246,6 +247,8 @@ section {
 header {
   width: 100%;
   position: fixed;
+  top: 0;
+  left: 0;
   font-size: 2.4em;
   background-color: transparent;
   z-index: 999;
@@ -929,7 +932,11 @@ aside#fixed-menu {
         padding: 10px 35px; } }
 @media (max-width: 1400px) {
   section:not(#slide, #news) > div.con {
-    padding: 0 20px; } }
+    padding: 0 20px; }
+
+  footer {
+    padding-left: 20px;
+    padding-right: 20px; } }
 @media (min-width: 1081px) {
   .mb {
     display: none; } }
@@ -1003,7 +1010,7 @@ aside#fixed-menu {
       header > nav > ul.depth-1 {
         visibility: hidden;
         position: fixed;
-        z-index: 1001;
+        z-index: 1005;
         top: 0;
         left: -100%;
         width: 60%;
@@ -1094,8 +1101,31 @@ aside#fixed-menu {
       display: -ms-flexbox;
       display: flex; }
       section#news > div.con > div.row a > div.cell > div.img-box {
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
         height: 100%; }
       section#news > div.con > div.row a > div.cell > div.text-box {
-        height: 100%; } }
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+        height: 100%; }
+  section#news > div.con > div.row .slick-list {
+    overflow: visible; }
+    section#news > div.con > div.row .slick-list .slick-slide.slick-center {
+      -webkit-transform: scale(1);
+              transform: scale(1); }
+  section#news > div.con > div.row .slick-dots {
+    bottom: -60px; }
+  section#news > div.con > a.link-btn {
+    margin-top: 80px; }
+
+  section#link > div.con > div.row > div.cell {
+    margin: 0 3.5px; }
+    section#link > div.con > div.row > div.cell > a > div.img-box {
+      margin-top: 0;
+      width: 40%; }
+    section#link > div.con > div.row > div.cell > a > p.sub-description {
+      display: none; }
+    section#link > div.con > div.row > div.cell:nth-of-type(2) > a > div.img-box {
+      width: 33%; } }
 
 /*# sourceMappingURL=style.css.map */
