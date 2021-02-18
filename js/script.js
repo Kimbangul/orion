@@ -3,29 +3,108 @@ $(document).ready(function () {
 
     function naviMenu_init() {
 
-        var $navMenuDepth1 = $('header > nav ul.depth-1');
-        var $navMenuDepth2 = $('header > nav  ul.depth-2');
-        var $nav = $('header > nav');
+        function responsive(){
 
+            
+                
+                var $navMenuDepth1 = $('header > nav ul.depth-1');
+                var $navMenuDepth2 = $('header > nav  ul.depth-2');
+                var $nav = $('header > nav');
+        
+        
+                function naviMenuOpen() {
+                    $nav.addClass('active');
+                    $navMenuDepth2.stop().slideDown(300);
+                }
+        
+                function naviMenuClose() {
+                    $nav.removeClass('active');
+                    $navMenuDepth2.stop().slideUp(300);
+                }
+        
 
-        function naviMenuOpen() {
-            $nav.addClass('active');
-            $navMenuDepth2.stop().slideDown(300);
+                $navMenuDepth1.hover(
+                    function () {
+                        if($(window).width() > 1080) { 
+                        naviMenuOpen();
+                        }
+                    },
+                    function () {
+                        naviMenuClose();
+                    }
+                );
+                
+            
+
         }
 
-        function naviMenuClose() {
-            $nav.removeClass('active');
-            $navMenuDepth2.stop().slideUp(300);
-        }
+        responsive();
 
-        $navMenuDepth1.hover(
-            function () {
-                naviMenuOpen();
-            },
-            function () {
-                naviMenuClose();
+        $(window).resize(function(){
+            responsive();
+
+        });
+
+
+
+        function mbMenu(){
+
+            var $menuBtn = $('header > nav > div.menu-btn > a ');   
+            var $mbMenuDepth1 = $('header > nav ul.depth-1');  
+            var $mbMenuCloseBtn= $('ul.depth-1 > li.mb-nav-topbar > div.close-btn > a');  
+            
+
+            function mbMenuOpenClose_init(){
+
+                function mbMenuOpenClose(){
+
+                   
+
+                    if($mbMenuDepth1.hasClass("on")){
+                        mbMenuClose();
+                    }
+                    else{
+                        mbMenuOpen();
+                    }
+    
+    
+                }
+    
+                function mbMenuOpen(){
+                    $mbMenuDepth1.addClass("on");
+                }
+                function mbMenuClose(){
+                    $mbMenuDepth1.removeClass("on");
+                }
+    
+                    
+                $menuBtn.click(function(e){   
+                    e.preventDefault();
+                    mbMenuOpenClose();
+                });
+    
+                $mbMenuCloseBtn.click(function(e){   
+                    e.preventDefault();
+                    mbMenuOpenClose();
+                });
+    
+
             }
-        );
+
+            mbMenuOpenClose_init();
+
+
+          
+
+
+        }
+
+        
+
+
+        mbMenu();
+
+
 
 
     }
@@ -90,7 +169,13 @@ $(document).ready(function () {
             vertical: false,
             dotsClass: "slick-dots",
             draggable: true,
-            adaptiveHeight: true
+            adaptiveHeight: true,
+            responsive:[              
+                {
+                    breakpoint: 780, 
+                    settings: { slidesToShow: 1}
+                }
+            ]
 
         });
 
@@ -106,13 +191,20 @@ $(document).ready(function () {
             prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
             nextArrow: "<button type='button' class='slick-next'><img src='img/arrow.png' alt='다음 슬라이드로'></button>",
             dots: true,
-            autoplay: true,
+            autoplay: false,
             centerMode: true,
+          
             autoplaySpeed: 7000,
             pauseOnHover: false,
             vertical: false,
             dotsClass: "slick-dots",
-            draggable: true
+            draggable: true,
+            responsive:[              
+                {
+                    breakpoint: 1080, 
+                    settings: { slidesToShow: 3,   centerPadding: '20%'}
+                }
+            ]
 
         });
     }
@@ -206,10 +298,8 @@ $(document).ready(function () {
                 })
 
                 .setClassToggle(target, "on")
-                .addTo(controller) // 컨트롤러 등록                
-                .addIndicators({
-                    name: "main"
-                });
+                .addTo(controller); // 컨트롤러 등록                
+
                 
                 $('aside#fixed-menu li.top').click(function(e){
                     e.preventDefault();
@@ -225,7 +315,7 @@ $(document).ready(function () {
 
             $('section:not(#link), section#link div.row:nth-of-type(2)').each(function(){
                 var title = $(this).find(".title");  
-                console.log(title);          
+           
 
                 var scene = new ScrollMagic.Scene({                   
                     triggerElement: this,
@@ -234,10 +324,8 @@ $(document).ready(function () {
                 })
 
                 .setClassToggle(title[0], "on")
-                .addTo(controller) // 컨트롤러 등록                
-                .addIndicators({
-                    name: "section"
-                });
+                .addTo(controller); // 컨트롤러 등록                
+
 
             });
 
