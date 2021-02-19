@@ -1864,6 +1864,21 @@ aside#fixed-menu{
         font-size: 7px;
     }
 
+    section#link{
+        & > div.con{
+            & > div.row{
+                & > div.cell{
+                    border-radius: 30px;
+                    & > a{
+                        & > h2.title{
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 @media (max-width: 500px){
