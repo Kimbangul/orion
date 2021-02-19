@@ -190,7 +190,7 @@ $(document).ready(function () {
             slide: 'a',
             infinite: true,
             slidesToShow: 1,
-            centerPadding: '35%',
+            centerPadding: '33%',
             slidesToScroll: 1,
             speed: 1000,
             prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
@@ -204,10 +204,18 @@ $(document).ready(function () {
             vertical: false,
             dotsClass: "slick-dots",
             draggable: true,
-            responsive:[              
+            responsive:[      
+                {
+                    breakpoint: 1440, 
+                    settings: {  centerPadding: '30%'}
+                },        
                 {
                     breakpoint: 1080, 
-                    settings: { slidesToShow: 1,   centerPadding: '15%'}
+                    settings: {  centerPadding: '13%'}
+                },
+                {
+                    breakpoint: 780, 
+                    settings: {  centerPadding: '0%'}
                 }
             ]
 
