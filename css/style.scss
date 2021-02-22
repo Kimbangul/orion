@@ -43,6 +43,7 @@ html,body{
     background: #fff;
     position: relative;
     z-index: -3;
+    min-width: 280px;
 }
 
 a, img{
@@ -1483,6 +1484,8 @@ aside#fixed-menu{
 
 }
 
+
+
     .pc{
         display: none;
     }
@@ -1554,6 +1557,7 @@ aside#fixed-menu{
                 flex-direction: column;
                 font-size: 1.5em;
                 transition: visibility 0s 0.5s, left 0.5s 0s;
+                min-width: 280px;
 
                 &.on{
                     visibility: visible;
@@ -1567,11 +1571,11 @@ aside#fixed-menu{
 
                 & > li.mb-nav-topbar{
                     display: flex;
-                    
+                    flex-direction: row;
                     width: 100%;
                     height: 50px;
                     margin-bottom: 20px;
-                    padding: 5px 25px;   
+                    padding: 5px 20px;   
                     position: absolute;
                     top: 0;
                     left: 0;          
@@ -1612,7 +1616,15 @@ aside#fixed-menu{
                 }
 
                 & > li{
+                    position: relative;
+                    flex-direction: column;
 
+                    &.on{
+                        & > ul.depth-2{
+                            display: block;
+                            height: auto;
+                        }
+                    }
 
                     &:hover{
                         &::after{
@@ -1627,6 +1639,14 @@ aside#fixed-menu{
 
 
                         
+                    }
+
+                    & > ul.depth-2{
+                        position: static;
+                        display: none;
+                        opacity: 1;
+                        height: 0;
+                        transform: none;
                     }
                 }
             }
@@ -1806,6 +1826,8 @@ aside#fixed-menu{
                 & .slick-list{
                     overflow: visible;
                     & .slick-slide{
+
+
                         &.slick-center{
                             transform: scale(1);
                         }
@@ -1858,7 +1880,16 @@ aside#fixed-menu{
         }
     }
 
+    header{
+        & > nav{
+            & > ul.depth-1{
 
+                font-size: 1.2em;
+
+            }
+
+        }
+    }
 
     section#slide{
         font-size: 7px;
@@ -1879,9 +1910,89 @@ aside#fixed-menu{
         }
     }
 
+    section#news{
+        &> div.con{
+            &> div.row{
+                button.slick-arrow{
+                    width: 15px;
+                    &.slick-next{
+                        
+                    }
+
+                    &.slick-prev{
+
+                    }
+                }
+            }   
+        }
+    }
+
+}
+
+@media (min-width: 501px){
+
+    section#new-product{
+        & > div.con{
+            & > div.row{
+    
+                & div.cell{
+                    & > a{
+                        & > div.img-box{
+                            & > img{                         
+    
+                                &.pc{
+                                    display: block;
+                                }
+        
+                                &.mb{
+                                    display: none;
+                                }
+        
+                            }
+                        }
+                    }
+    
+    
+                }
+    
+            }
+        }
+    }
+
 }
 
 @media (max-width: 500px){
+
+    @keyframes prevarrow-ani2{
+        0%{
+            left: 5%;
+        }
+        100%{
+            left: 5.5%;
+        }
+    
+    }
+    
+    
+    @keyframes nextarrow-ani2{
+        0%{
+            right: 5%;
+        }
+        100%{
+            right: 5.5%;
+        }
+    
+    }
+
+    section:not(#slide, #news) > div.con{
+        padding: 0 10px;
+    }
+
+    footer{
+        font-size: 6px;
+        padding: 10px;
+    }
+   
 
     html,body{
         font-size: 8px;
@@ -1903,7 +2014,7 @@ aside#fixed-menu{
             }
 
             & > div.menu-btn{
-                width: 14px;
+                width: 18px;
             }
             & > ul.lang{
                 font-size: 0.6em;
@@ -1911,6 +2022,19 @@ aside#fixed-menu{
                 & > li{
                     & > button:not(.active){
                         display: none;
+                    }
+                }
+            }
+
+            & > ul.depth-1{
+                font-size: 1em;
+
+                & > li.mb-nav-topbar{
+                    padding: 5px 15px;
+                    padding-left: 25px;
+
+                    & > div.close-btn{
+                        width: 18px;
                     }
                 }
             }
@@ -1959,6 +2083,13 @@ aside#fixed-menu{
 
                     &:hover{
                         & >a{
+
+                            & > div.img-box{
+                                & > img{
+
+                                }
+                            }
+
                             &::after{
                                 font-size: 2.2rem;
                             }
@@ -1997,6 +2128,15 @@ aside#fixed-menu{
                         & > div.img-box{
                             & > img{
                                 border-radius: 20px;
+
+                                &.pc{
+                                    display: none;
+                                }
+        
+                                &.mb{
+                                    display: block;
+                                }
+        
                             }
                         }
                     }
@@ -2030,8 +2170,19 @@ aside#fixed-menu{
                 }
 
                 & a{
+                    padding-bottom: 12%;
                     & > div.cell{
                         border-radius: 20px;
+
+                        & > div.img-box{
+                            height: 50%;
+                        }
+
+                        & > div.text-box{
+                            height: 50%;
+                            padding: 15px 10px;
+                        }
+
                     }
                 }
             }
@@ -2088,6 +2239,10 @@ aside#fixed-menu{
         }
     }
 
+    aside#fixed-menu{
+        right: 10px;
+    }
+
 }
 
 @media (max-width: 375px){
@@ -2142,4 +2297,10 @@ aside#fixed-menu{
     }
 
 
+}
+
+@media (max-width: 279px){
+    html,body{
+        //overflow-x: auto;
+    }
 }

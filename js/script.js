@@ -167,7 +167,7 @@ $(document).ready(function () {
             speed: 1000,
             dots: true,
             arrows: false,
-            autoplay: true,
+            autoplay: false,
             autoplaySpeed: 5000,
             pauseOnHover: false,
             vertical: false,
@@ -216,7 +216,8 @@ $(document).ready(function () {
                 {
                     breakpoint: 780, 
                     settings: {  centerPadding: '0%'}
-                }
+                 },
+
             ]
 
         });
