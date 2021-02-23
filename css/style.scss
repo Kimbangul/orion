@@ -1434,6 +1434,70 @@ aside#fixed-menu{
 }
 
 // fixed menu end
+// qr code start
+
+aside#qr-popup{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1500;
+    
+    opacity: 0;
+    visibility: hidden;
+    background: rgba(0,0,0,0.6);
+    transition: opacity 0.3s, visibility 0s 0.3s;
+
+    &.on{
+        opacity: 1;
+        visibility: visible;
+        transition: opacity 0.3s, visibility 0s;
+    }
+
+    & > div.img-box{
+        position: absolute;
+        top: 49%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        width: 90%;
+        max-width: 418px;
+        
+
+
+        & > div.close-btn{
+            margin-left: auto;
+            margin-right: 0;
+            margin-bottom: 5px;
+            width: 34px;
+            height: 100%;
+
+            & > a{
+                width: 100%;
+                padding-bottom: 100%;
+                position: relative;
+
+                & > span{
+                    position: absolute;
+                    width: 100%;
+                    height:2px;
+                    background-color: #fff;
+                    top: 50%;
+                    left: 50%;
+
+                    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+
+
+                    &:last-child{
+                        transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// qr code end
 // 반응형 옵션
 
 @media (max-width: 1440px){
@@ -2317,6 +2381,14 @@ aside#fixed-menu{
 
     aside#fixed-menu{
         right: 10px;
+    }
+
+    aside#qr-popup{
+        & > div.img-box{
+            & > div.close-btn{
+                width: 24px;
+            }
+        }
     }
 
 }
