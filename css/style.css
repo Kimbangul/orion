@@ -15,7 +15,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
 
-html, body {
+html,
+body {
   font-family: 'Roboto', 'Noto Sans KR', sans-serif;
   font-size: 10px;
   overflow-x: hidden;
@@ -24,7 +25,8 @@ html, body {
   z-index: -3;
   min-width: 280px; }
 
-a, img {
+a,
+img {
   display: block; }
 
 .slick-list {
@@ -39,7 +41,9 @@ a, img {
       .slick-list > .slick-track > .slick-slide > a:focus {
         outline: none; }
 
-.slick-slider, .slick-list, .slick-track {
+.slick-slider,
+.slick-list,
+.slick-track {
   height: 100%; }
 
 .roboto {
@@ -121,7 +125,7 @@ a, img {
 .sub-description {
   padding: 10px 0 70px 0;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   color: #999; }
 
 .link-btn {
@@ -137,7 +141,7 @@ a, img {
   overflow: hidden;
   -webkit-transition: background-color 0.3s, color 0.3s;
   transition: background-color 0.3s, color 0.3s;
-  margin-top: 50px; }
+  margin-top: 100px; }
   .link-btn:hover {
     background-color: #ed1c2a;
     color: #fff; }
@@ -408,7 +412,7 @@ section#slide {
         transition: font-size 0.5s, visibility 0s, opacity 1.5s 1s, transform 1s 1s, -webkit-transform 1s 1s; }
         section#slide div.con div.img-slide > div.text-box > span {
           font-size: 0.25em;
-          font-family: 'nanumsquare','Noto Sans KR', sans-serif;
+          font-family: 'nanumsquare', 'Noto Sans KR', sans-serif;
           font-weight: 300; }
       section#slide div.con div.img-slide.slick-current {
         -webkit-animation: mainslide-ani 1s ease-in-out 0s 1 normal both;
@@ -484,7 +488,7 @@ section#slide {
         white-space: nowrap; }
 
 section#introduction > div.con {
-  max-width: 1400px;
+  max-width: 998px;
   margin: 200px auto; }
   section#introduction > div.con > div.row:first-child > div.img-box {
     width: 100px;
@@ -517,13 +521,13 @@ section#product div.con {
   transition: opacity 0.7s, -webkit-transform 0.7s;
   transition: opacity 0.7s, transform 0.7s;
   transition: opacity 0.7s, transform 0.7s, -webkit-transform 0.7s;
-  max-width: 1400px;
+  max-width: 998px;
   margin: 0 auto; }
   section#product div.con > div.row {
     width: 100%; }
     section#product div.con > div.row > div.cell {
       height: 100%;
-      padding: 7px;
+      padding: 20px;
       overflow: hidden; }
       section#product div.con > div.row > div.cell > a {
         width: 100%;
@@ -580,16 +584,19 @@ section#product div.con {
       height: 700px; }
       section#product div.con > div.row:nth-of-type(2) > div.cell {
         height: 50%; }
+        section#product div.con > div.row:nth-of-type(2) > div.cell:nth-child(2) > a > div.img-box > img {
+          -o-object-position: left;
+             object-position: left; }
   section#product div.con.visible {
     opacity: 1;
     -webkit-transform: translateY(0);
             transform: translateY(0); }
 
 section#new-product {
-  margin: 200px 0; }
+  margin: 325px 0; }
   section#new-product > div.con {
     margin: 0 auto;
-    max-width: 1400px; }
+    max-width: 998px; }
     section#new-product > div.con > div.row {
       width: 100%; }
       section#new-product > div.con > div.row ul.slick-dots > li {
@@ -614,8 +621,8 @@ section#new-product {
         width: 100%; }
       section#new-product > div.con > div.row div.cell {
         width: 100%;
-        height: 380px;
-        padding: 0 7px;
+        height: 330px;
+        padding: 0 10px;
         -webkit-transition: -webkit-transform 0.3s;
         transition: -webkit-transform 0.3s;
         transition: transform 0.3s;
@@ -637,6 +644,7 @@ section#new-product {
               border-radius: 50px; }
 
 section#news > div.con {
+  max-width: 1440px;
   margin: 0 auto; }
   section#news > div.con > div.row {
     width: 100%;
@@ -705,7 +713,7 @@ section#news > div.con {
       width: 33.3%;
       height: 0;
       position: relative;
-      padding-bottom: 10%;
+      padding-bottom: 12%;
       background: #fff;
       margin: 0 7px; }
       section#news > div.con > div.row a > div.cell {
@@ -743,7 +751,7 @@ section#news > div.con {
             text-overflow: ellipsis;
             white-space: nowrap; }
           section#news > div.con > div.row a > div.cell > div.text-box > div.date {
-            margin: 7px 0  20px 0;
+            margin: 7px 0 20px 0;
             font-size: 0.85em;
             text-align: right; }
           section#news > div.con > div.row a > div.cell > div.text-box > p {
@@ -752,9 +760,9 @@ section#news > div.con {
             text-overflow: ellipsis; }
 
 section#link {
-  margin: 200px 0; }
+  margin: 325px 0; }
   section#link > div.con {
-    max-width: 1400px;
+    max-width: 998px;
     margin: 0 auto; }
     section#link > div.con > div.row > div.cell {
       opacity: 0;
@@ -816,11 +824,12 @@ section#link {
             -o-object-fit: contain;
                object-fit: contain; }
         section#link > div.con > div.row > div.cell > a > h2.title {
+          font-size: 2rem;
           text-align: center; }
         section#link > div.con > div.row > div.cell > a > p.sub-description {
           padding-bottom: 20px; }
     section#link > div.con > div.row:nth-child(2) {
-      margin-top: 150px; }
+      margin-top: 325px; }
       section#link > div.con > div.row:nth-child(2) > ul.social {
         margin: 70px 0;
         margin-bottom: 10px; }
@@ -854,12 +863,12 @@ section#link {
 
 footer {
   width: 100%;
-  padding: 50px 0;
+  padding: 80px 0;
   margin-top: 200px;
   color: rgba(0, 0, 0, 0.6);
   background-color: #ececec; }
   footer > div.con {
-    max-width: 1400px;
+    max-width: 998px;
     margin: 0 auto; }
     footer > div.con > div.row > div.cell:first-of-type {
       margin-right: 50px; }
@@ -1060,7 +1069,8 @@ aside#qr-popup {
   .mb {
     display: block; }
 
-  html, body {
+  html,
+  body {
     font-size: 9px; }
 
   header {
@@ -1373,7 +1383,8 @@ aside#qr-popup {
     font-size: 6px;
     padding: 10px; }
 
-  html, body {
+  html,
+  body {
     font-size: 8px; }
 
   .sub-description {
