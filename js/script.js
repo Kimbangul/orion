@@ -255,10 +255,10 @@ $(document).ready(function () {
             dotsClass: "slick-dots",
             draggable: true,
             responsive:[      
-                {
-                    breakpoint: 1440, 
-                    settings: {  centerPadding: '30%'}
-                },        
+                // {
+                //     breakpoint: 1440, 
+                //     settings: {  centerPadding: '30%'}
+                // },        
                 {
                     breakpoint: 1080, 
                     settings: {  centerPadding: '13%'}
