@@ -23,6 +23,8 @@ $font-color: #494949;
 $font-color-2: #999;
 $font-color: rgba(0, 0, 0, 0.6);
 
+$section-margin: 500px;
+
 
 // variable end
 
@@ -910,7 +912,7 @@ section#product {
 
 // new product start
 section#new-product {
-    margin: 325px 0;
+    margin: $section-margin 0;
 
     &>div.con {
         margin: 0 auto;
@@ -1106,10 +1108,10 @@ section#news {
                 height: 0;
                 position: relative;
 
-                padding-bottom: 12%;
+                padding-bottom: 14%;
 
                 background: #fff;
-                margin: 0 7px;
+                // margin: 0 7px;
 
 
                 &>div.cell {
@@ -1187,7 +1189,7 @@ section#news {
 // link start
 
 section#link {
-    margin: 325px 0;
+    margin: $section-margin 0;
 
     &>div.con {
         max-width: $max-width;
@@ -1219,7 +1221,7 @@ section#link {
                     top: 0;
                     left: 0;
                     display: flex;
-                    padding: 5px;
+                    padding: 15px;
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
@@ -1564,6 +1566,16 @@ aside#qr-popup {
 @media(max-width: 1400px) {
     section:not(#slide, #news)>div.con {
         padding: 0 100px;
+    }
+
+    section#link{
+        & > div.con{
+            & > div.row{
+                & > div.cell{
+                    padding-bottom: 36%;
+                }
+            }
+        }
     }
 
     footer {
@@ -1926,8 +1938,8 @@ aside#qr-popup {
         &>div.con {
             &>div.row {
                 &>div.cell {
-                    margin: 0 3.5px;
-
+                    margin: 0 10px;
+                    padding-bottom: 33.3%;
                     &>a {
                         &>div.img-box {
                             margin-top: 0;
@@ -1978,6 +1990,16 @@ aside#qr-popup {
                 }
             }
         }
+    }
+
+}
+
+@media (max-width: 1080px) and (orientation: portrait){
+
+    $section-margin: 375px;
+
+    section#new-product, section#link{
+        margin: $section-margin 0px;
     }
 
 }
