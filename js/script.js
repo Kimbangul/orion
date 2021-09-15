@@ -442,7 +442,7 @@ $(document).ready(function () {
 
             var scene3 = new ScrollMagic.Scene({                   
                     triggerElement: "section#link",
-                    triggerHook: 0.5, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
+                    triggerHook: 0.8, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
                     offset: 0,
                     // duration: "100%",
                 })
