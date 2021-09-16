@@ -956,7 +956,9 @@ section#new-product {
 
             & .slick-list {
                 width: 100%;
-
+                & > .slick-track{
+                    display: flex !important;
+                }
             }
 
 
@@ -986,6 +988,8 @@ section#new-product {
                 &>a {
                     width: 100%;
                     height: 100%;
+                    border-radius: 50px;
+                    box-shadow: 7px 7px 5px #ececec;
 
                     &>div.img-box {
                         width: 100%;
@@ -1666,6 +1670,24 @@ aside#qr-popup {
         padding: 0 100px;
     }
 
+    section#new-product{
+        & > div.con{
+            & > div.row{
+                &  div.cell{
+                    & > a{
+                        & > div.text-box{
+                            font-size: 9px;
+
+                            & > div.product-title{
+                                font-size: 2.8em;
+                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
    
 
     section#link{
@@ -2044,8 +2066,7 @@ aside#qr-popup {
                            
 
                             & > div.product-title{
-                                font-size: 3em;
-                                margin-bottom: 25px;
+                                margin-bottom: 20px;
 
                                 &::after{
                                     display: none;
@@ -2212,7 +2233,7 @@ aside#qr-popup {
                 & div.cell{
                     & > a{
                         & > div.text-box{
-                            // font-size: 8px;
+                            font-size: 8px;
                             & > div.product-title{
                                 font-size: 2.6em;
                                 margin-bottom: 18px;
@@ -2247,6 +2268,34 @@ aside#qr-popup {
         }
     }
 
+    @keyframes prevarrow-ani2 {
+        0% {
+            left: -3%;
+        }
+
+        100% {
+            left: -2.5%;
+        }
+
+    }
+
+
+    @keyframes nextarrow-ani2 {
+        0% {
+            right: -3%;
+        }
+
+        100% {
+            right: -2.5%;
+        }
+
+    }
+
+    .sub-description{
+        padding: 10px 0 50px 0;
+        font-size: 1.4rem;
+    }
+
     header {
         &>nav {
             &>ul.depth-1 {
@@ -2276,6 +2325,45 @@ aside#qr-popup {
         }
     }
 
+    section#new-product{
+        & > div.con{
+            & > div.row{
+                & div.cell{
+                    height: auto;
+                    margin-bottom: 30px;
+                    & > a{
+                        height: auto;
+                        padding: 0;
+                        position: static;
+
+                        & > div.img-box{
+                            position: static;
+                        }
+                        & > div.text-box{
+                            position: static;
+                            flex-direction: row;
+                            padding: 30px 15px;
+
+                            & > p{
+                                text-align: left;
+                            }
+
+                            & > div.product-title{
+                                margin-bottom: 0;
+                                &::after{
+                                    display: block;
+                                    height: 18px;
+                                    transform: none;
+                                    margin: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
     section#slide {
         font-size: 7px;
     }
@@ -2285,7 +2373,7 @@ aside#qr-popup {
             &>div.row {
                 &>div.cell {
                     border-radius: 30px;
-
+                 
                     &>a {
                         &>h2.title {
                             font-size: 2.4rem;
@@ -2298,7 +2386,31 @@ aside#qr-popup {
 
     section#news {
         &>div.con {
+            padding: 0 100px;
             &>div.row {
+
+                & a{
+                    padding-bottom: 8%;
+
+                    & > div.cell{
+                        & > div.img-box{
+                            height: 50%;
+                        }
+                        & > div.text-box{
+                            height: 50%;
+                            padding: 20px 30px;
+                            font-size: 1.4em;
+                            
+                            & > p{
+                                text-align: left;
+                            }
+                            & > div.date{
+                                margin: 3px 0 10px 0;
+                            }
+                        }
+                    }
+                }
+
                 button.slick-arrow {
                     width: 15px;
 
@@ -2541,8 +2653,12 @@ aside#qr-popup {
         &>div.con {
             &>div.row {
 
+                // & a{
+                //     padding-bottom: 12%;
+                // }
+
                 & ul.slick-dots {
-                    bottom: -40px;
+                    bottom: -5px;
 
                     &>li {
                         margin: 0 3px;
@@ -2563,9 +2679,9 @@ aside#qr-popup {
                 & div.cell {
                     padding: 0 15px;
                     &>a {
+                        
                         &>div.img-box {
                             &>img {
-                                border-radius: 20px;
 
                                 &.pc {
                                     display: none;
@@ -2576,15 +2692,6 @@ aside#qr-popup {
                                 }
 
                             }
-                        }
-
-                        & > div.text-box{
-                            position: absolute;
-                            width: 100%;
-                            height: 40%;
-                            font-size: 8px;
-                            bottom: 0;
-                            left: 0;
                         }
                     }
 
@@ -2632,6 +2739,15 @@ aside#qr-popup {
                             padding: 15px 10px;
                         }
 
+                    }
+                }
+
+               & .slick-list{
+                 & .slick-slide{
+                    transform: scale(0.9);
+                    &.slick-center{
+                        transform: scale(1);
+                    }
                     }
                 }
             }
