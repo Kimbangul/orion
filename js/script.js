@@ -267,12 +267,12 @@ $(document).ready(function () {
                     breakpoint: 780, 
                     settings: {  centerPadding: '0%'}
                  },
-                 {
-                     breakpoint: 500,
-                     settings: {
+                //  {
+                //      breakpoint: 500,
+                //      settings: {
                          
-                     }
-                 }
+                //      }
+                //  }
 
             ]
 
