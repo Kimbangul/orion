@@ -2162,7 +2162,7 @@ aside#qr-popup {
 
 @media (max-width: 1080px) and (orientation: portrait){
 
-    $section-margin: 300px;
+    $section-margin: 350px;
 
     section#new-product, section#link{
         margin: $section-margin 0px;
@@ -2478,6 +2478,22 @@ aside#qr-popup {
 
 }
 
+@media (min-width: 501px) and (max-width: 768px){
+    section#link{
+        & > div.con{
+            & > div.row{
+                & > div.cell{
+                    & > a{
+                        & > h2.title{
+                            font-size: 1.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 @media (max-width: 500px) {
 
     @keyframes prevarrow-ani2 {
@@ -2510,7 +2526,7 @@ aside#qr-popup {
     }
 
     section:not(#slide, #news)>div.con {
-        padding: 0 20px;
+        padding: 0 30px;
     }
 
     footer {
@@ -2535,7 +2551,7 @@ aside#qr-popup {
     header {
         &>nav {
             height: 40px;
-            padding: 0 20px;
+            padding: 0 30px;
 
             &>div.logo {
                 max-width: 80px;
@@ -2646,7 +2662,7 @@ aside#qr-popup {
         div.con {
             &>div.row {
                 &>div.cell {
-                    margin-bottom: 20px;
+                    margin-bottom: 30px;
                     padding-bottom: 40%;
                     &>a {
                         border-radius: 20px;
@@ -2676,7 +2692,7 @@ aside#qr-popup {
     }
 
     section#new-product {
-        margin: 200px 0;
+        margin: $section-margin 0;
 
         &>div.con {
             &>div.row {
@@ -2733,6 +2749,10 @@ aside#qr-popup {
                 }
 
             }
+
+            & .link-btn{
+                margin-top: 50px;
+            }
         }
     }
 
@@ -2760,7 +2780,7 @@ aside#qr-popup {
                 }
 
                 & a {
-                    padding-bottom: 12%;
+                    padding-bottom: 9%;
 
                     &>div.cell {
                         border-radius: 20px;
@@ -2785,12 +2805,23 @@ aside#qr-popup {
                     }
                     }
                 }
+
+                & button.slick-arrow{
+                    display: none !important;
+                }
+            }
+
+            & .link-btn{
+                margin-top: 60px;
             }
         }
     }
 
     section#link {
-        margin: 200px 0;
+
+        $section-margin: 275px;
+
+        margin: $section-margin 0;
 
         &>div.con {
             &>div.row {
@@ -2815,10 +2846,10 @@ aside#qr-popup {
                     }
                 }
 
-                &>div.cell {
-                    margin-bottom: 20px;
+                &>div.cell {                   
                     padding-bottom: 50%;
                     border-radius: 20px;
+                    margin: 0 0 30px 0;
 
                     &:nth-of-type(2) {
                         &>a {

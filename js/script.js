@@ -219,7 +219,7 @@ $(document).ready(function () {
             arrows: false,
             autoplay: false,
             autoplaySpeed: 5000,
-            pauseOnHover: false,
+            pauseOnHover: true,
             vertical: false,
             dotsClass: "slick-dots",
             draggable: true,
@@ -227,7 +227,7 @@ $(document).ready(function () {
             responsive:[              
                 {
                     breakpoint: 780, 
-                    settings: { slidesToShow: 1}
+                    settings: { slidesToShow: 1, autoplay: true}
                 }
             ]
 
@@ -249,8 +249,8 @@ $(document).ready(function () {
             autoplay: false,
             centerMode: true,
           
-            autoplaySpeed: 7000,
-            pauseOnHover: false,
+            autoplaySpeed: 5000,
+            pauseOnHover: true,
             vertical: false,
             dotsClass: "slick-dots",
             draggable: true,
@@ -265,7 +265,7 @@ $(document).ready(function () {
                 },
                 {
                     breakpoint: 780, 
-                    settings: {  centerPadding: '0%'}
+                    settings: {  centerPadding: '0%', autoplay: true}
                  },
                 //  {
                 //      breakpoint: 500,
