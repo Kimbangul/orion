@@ -2496,6 +2496,8 @@ aside#qr-popup {
 
 @media (max-width: 500px) {
 
+    $section-margin: 200px;
+
     @keyframes prevarrow-ani2 {
         0% {
             left: 5%;
@@ -2520,18 +2522,32 @@ aside#qr-popup {
     }
 
     .link-btn{
-        padding: 13px 14px;
-        font-size: 1.3rem;
+        padding: 17px 20px;
+        font-size: 1.5rem;
         border-width: 2px;
     }
 
     section:not(#slide, #news)>div.con {
-        padding: 0 30px;
+        padding: 0 20px;
     }
 
     footer {
         font-size: 6px;
         padding: 20px;
+
+        & > div.con{
+            & > div.row {
+                & > div.cell{
+                    &:nth-of-type(2){
+                        & > ul.footer-menu {
+                            & > li{
+                                padding: 0 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 
 
@@ -2551,7 +2567,7 @@ aside#qr-popup {
     header {
         &>nav {
             height: 40px;
-            padding: 0 30px;
+            padding: 0 20px;
 
             &>div.logo {
                 max-width: 80px;
@@ -2819,7 +2835,7 @@ aside#qr-popup {
 
     section#link {
 
-        $section-margin: 275px;
+      
 
         margin: $section-margin 0;
 
