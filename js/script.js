@@ -279,77 +279,77 @@ $(document).ready(function () {
         });
     }
 
-    function typingEffect_init() {
+    // function typingEffect_init() {
 
 
-        var i = 0;
-        var textnum = 0;
-        var text = [
-            '서로간의 정이 새록새록 솟아나는 초코파이!',
-            '정타임을 함께하면 우리들의 마음은 하나가 됩니다.',
+    //     var i = 0;
+    //     var textnum = 0;
+    //     var text = [
+    //         '서로간의 정이 새록새록 솟아나는 초코파이!',
+    //         '정타임을 함께하면 우리들의 마음은 하나가 됩니다.',
 
-        ]
-        var completeText =
-            '서로간의 정이 새록새록 솟아나는 초코파이! <br> <span>정타임</span>을 함께하면 우리들의 마음은 하나가 됩니다.';
+    //     ]
+    //     var completeText =
+    //         '서로간의 정이 새록새록 솟아나는 초코파이! <br> <span>정타임</span>을 함께하면 우리들의 마음은 하나가 됩니다.';
 
-        var tag = [
-            '<br>',
-            '',
-        ]
+    //     var tag = [
+    //         '<br>',
+    //         '',
+    //     ]
 
-        var tg = $('#introduction p.line1');
-
-
-        function insertTag(insertToTag, target) {
-            existHtml = tg.html();
-            var newHtml = existHtml + insertToTag;
-            target.html(newHtml);
-
-        }
-
-        function typeEffect(target) {
-
-            function typeLine() {
-                if (i < textToWrite.length) {
-
-                    var existHtml = tg.html();
-
-                    target.html(existHtml += textToWrite[i]);
-                    // 한 글자씩 타이핑한다.
-                    i++;
-
-                    setTimeout(typeLine, 70);
-
-                } else if (i = textToWrite.length) {
-
-                    insertTag(tag[textnum], target);
-                    //  한 줄 타이핑이 끝나고 나서 태그 삽입
-
-                    i = 0;
-                    textnum++;
-                    setTimeout(typeEffect, 200, target);
-                }
-            }
-
-            if (textnum < text.length) {
-                //  글자 수
-                var textToWrite = text[textnum];
+    //     var tg = $('#introduction p.line1');
 
 
-                typeLine();
+    //     function insertTag(insertToTag, target) {
+    //         existHtml = tg.html();
+    //         var newHtml = existHtml + insertToTag;
+    //         target.html(newHtml);
+
+    //     }
+
+    //     function typeEffect(target) {
+
+    //         function typeLine() {
+    //             if (i < textToWrite.length) {
+
+    //                 var existHtml = tg.html();
+
+    //                 target.html(existHtml += textToWrite[i]);
+    //                 // 한 글자씩 타이핑한다.
+    //                 i++;
+
+    //                 setTimeout(typeLine, 70);
+
+    //             } else if (i = textToWrite.length) {
+
+    //                 insertTag(tag[textnum], target);
+    //                 //  한 줄 타이핑이 끝나고 나서 태그 삽입
+
+    //                 i = 0;
+    //                 textnum++;
+    //                 setTimeout(typeEffect, 200, target);
+    //             }
+    //         }
+
+    //         if (textnum < text.length) {
+    //             //  글자 수
+    //             var textToWrite = text[textnum];
 
 
-            } else if (textnum = text.length) {
-                target.html(completeText);
-            }
-
-        }
+    //             typeLine();
 
 
-        typeEffect(tg);
+    //         } else if (textnum = text.length) {
+    //             target.html(completeText);
+    //         }
+
+    //     }
 
 
-    }
+    //     typeEffect(tg);
+
+
+    // }
 
 
 
@@ -389,7 +389,7 @@ $(document).ready(function () {
 
                 var scene = new ScrollMagic.Scene({                   
                     triggerElement: this,
-                    triggerHook: 0.7, 
+                    triggerHook: 0.2, 
                     offset: 0,                
                 })
 
@@ -410,15 +410,15 @@ $(document).ready(function () {
             var scene1 = new ScrollMagic.Scene({
                     reverse: false,
                     triggerElement: "section#introduction > div.con ",
-                    triggerHook: 0.5, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
-                    offset: -200,
+                    triggerHook: 0.3, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
+                    offset: -300,
                     // duration: "100%",
                 })
 
                 .setClassToggle(target1, "visible")
                 .addTo(controller) // 컨트롤러 등록               
 
-                .on("start end", typingEffect_init);
+                // .on("start end", typingEffect_init);
 
 
         }
