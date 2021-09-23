@@ -12,7 +12,7 @@
 
 // variable start
 
-$max-width: 1400px;
+$max-width: 1280px;
 $border-color : rgba(0, 0, 0, 0.15);
 $point-color: rgb(237, 28, 42);
 $secondary-color: rgb(51, 37, 38);
@@ -736,7 +736,7 @@ section#slide {
 
 // power brand start
 section#power-brand{
-    margin: $section-margin 0;
+    margin: 300px 0;
     & > div.con{
         max-width: $max-width;
         margin: 0 auto;
@@ -758,7 +758,12 @@ section#power-brand{
                         order: 0;
                         margin-bottom: 10px;
                         & > .title{
-                            font-size: 3rem;                          
+                            font-size: 3rem;   
+                            font-weight: 700;
+                            letter-spacing: 0.03em;
+                            & > span{
+                                font-weight: 400;
+                            }                       
                         }
                         & > p{
                             font-size: 1.6rem;
@@ -792,14 +797,47 @@ section#power-brand{
                             padding: 30px 0;
 
                             & > .title{
-                                font-weight: 700;
+                                font-weight: 400;
                                 font-size: 3rem;
+
+                                & > span{
+                                    font-weight: 700;
+                                }
                             }
                             & > p{
                                 font-size: 1.6rem;
                                 margin-top: 1.9rem;
                                 
                             }
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                & > div.cell{
+                    &.text-box{
+                        order: 0;
+                        margin-bottom: 10px;
+                        & > .title{
+                            font-size: 3rem;   
+                            font-weight: 700;
+                            letter-spacing: 0.03em;
+                            & > span{
+                                font-weight: 400;
+                            }                       
+                        }
+                        & > p{
+                            font-size: 1.6rem;
+                            padding: 2em 0;
+
+                        }
+                    }
+                    &.img-box{
+                        max-width: 550px;
+                        order: 1;
+                        & > img{
+                            transform: translateX(-43px);
                         }
                     }
                 }
@@ -1685,6 +1723,9 @@ aside#qr-popup {
 
 @media (max-width: 1440px) {
 
+    $max-width: 980px;
+    $section-margin: 350px;
+
     @keyframes prevarrow-ani {
         0% {
             left: 60px;
@@ -1707,11 +1748,20 @@ aside#qr-popup {
     
     }
 
+    .title{
+        font-size: 3rem;
+    }
+
+    html, body{
+        font-size: 9px;
+    }
+
     header {
         font-size: 2em;
 
         &>nav {
-            padding: 0 30px;
+            padding: 0 50px;
+            height: 70px;
 
             &>ul.depth-1 {
                 &>li {
@@ -1728,6 +1778,10 @@ aside#qr-popup {
     section#slide{
 
         & div.con{
+            & ul.slick-dots{
+                top: 120px;
+            }
+
             & > .slick-arrow{
                 width: 15px;
                 &.slick-prev{
@@ -1739,12 +1793,94 @@ aside#qr-popup {
                 }
             }
 
+            & div.img-slide{
+                & > div.text-box{
+                    font-size: 6em;
+                }
+            }
+
             & > div.scroll-down{
+                &> span{
+                    font-size: 1.2em;
+                }
                 & > img{
                     width: 30px;
                     margin-top: 15px;
                 }
             }
+        }
+    }
+
+    section#power-brand{
+        & > div.con{
+            max-width: $max-width;
+        }
+       
+    }
+
+    section#product{
+        & > div.con{
+            max-width: $max-width;
+            flex-direction: column;
+            & > div.row{
+                &:first-of-type{
+                    & > div.cell{
+                        height: 350px;
+
+                        & .pc{
+                            display: none;
+                            
+                            }
+                            & .mb{
+                                display: block;
+                            }
+                    }
+                }
+                &:nth-of-type(2){
+                    flex-direction: row;
+                    height: 350px;
+
+                    & > div.cell{
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    section#new-product{
+        margin: $section-margin 0;
+        & > div.con{
+            max-width: $max-width;
+        }
+    }
+  
+    section#news{
+        & > div.con{
+            max-width: $max-width;
+
+            & > div.row{
+                & a{
+                    & > div.cell{
+                        & > div.text-box{
+                            padding: 20px 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section#link{
+        margin: $section-margin 0;
+        & > div.con{
+            max-width: $max-width;
+        }
+    }
+
+    footer{
+        & > div.con{
+            max-width: $max-width;
         }
     }
 }

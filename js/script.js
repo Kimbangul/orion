@@ -385,18 +385,17 @@ $(document).ready(function () {
 
             $('section:not(#link), section#link div.row:nth-of-type(2)').each(function(){
                 var title = $(this).find(".title");  
-           
 
-                var scene = new ScrollMagic.Scene({                   
-                    triggerElement: this,
-                    triggerHook: 0.2, 
-                    offset: 0,                
-                })
-
-                .setClassToggle(title[0], "on")
-                .addTo(controller); // 컨트롤러 등록                
-
-
+                for (var i = 0; i<=title.length; i++){
+                    var scene = new ScrollMagic.Scene({                   
+                        triggerElement: this,
+                        triggerHook: 0.55, 
+                        offset: 0,                
+                    })
+    
+                    .setClassToggle(title[i], "on")
+                    .addTo(controller); // 컨트롤러 등록      
+                }
             });
 
 
