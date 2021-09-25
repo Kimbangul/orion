@@ -197,7 +197,7 @@ $(document).ready(function () {
             prevArrow: "<button type='button' class='slick-prev'><img src='img/arrow.png' alt='이전 슬라이드로'></button>", // 이전 화살표 모양 설정
             nextArrow: "<button type='button' class='slick-next'><img src='img/arrow.png' alt='다음 슬라이드로'></button>",
             dots: true,
-            autoplay: true,
+            autoplay: false, // 수정
             autoplaySpeed: 5000,
             pauseOnHover: false,
             vertical: false,
@@ -227,7 +227,9 @@ $(document).ready(function () {
             responsive:[              
                 {
                     breakpoint: 780, 
-                    settings: { slidesToShow: 1, autoplay: true}
+                    settings: { slidesToShow: 1, 
+                        // autoplay: true
+                    }
                 }
             ]
 
@@ -265,7 +267,9 @@ $(document).ready(function () {
                 },
                 {
                     breakpoint: 780, 
-                    settings: {  centerPadding: '0%', autoplay: true}
+                    settings: {  centerPadding: '0%', 
+                    // autoplay: true
+                }
                  },
                 //  {
                 //      breakpoint: 500,
