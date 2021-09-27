@@ -742,11 +742,21 @@ section#slide {
 // power brand start
 section#power-brand{
     margin: 300px 0;
+    
+
     & > div.con{
         max-width: $max-width;
         margin: 0 auto;
 
         & > .row{
+            opacity: 0;
+                    transform: translateY(50px);
+                    transition: opacity 0.7s, transform 1s;
+
+                    &.on{
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
 
             &:first-child{
                 & > div.cell{                
@@ -3693,6 +3703,8 @@ aside#qr-popup {
                 padding: 0 30px;
 
                 & > .row{
+                    
+
                     &:nth-child(2){
                         margin: 175px 0;
 

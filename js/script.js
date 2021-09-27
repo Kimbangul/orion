@@ -464,12 +464,36 @@ $(document).ready(function () {
 
         }
 
+
+    function animation4() {
+
+        // var target = "section";
+
+        $('section#power-brand > div.con > div.row').each(function(){
+            // var title = $(this).find(".title");  
+                var scene = new ScrollMagic.Scene({                   
+                    triggerElement: this,
+                    triggerHook: 0.6, 
+                    offset: 0,                
+                })
+
+                .setClassToggle(this, "on")
+                .addTo(controller); // 컨트롤러 등록      
+            
+        });
+
+
+    }
+
+
         animation1();
         animation2();
         animation3();
+        animation4();
         main();
         section();
     }
+
 
     
 

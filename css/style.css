@@ -495,81 +495,93 @@ section#power-brand {
   section#power-brand > div.con {
     max-width: 1280px;
     margin: 0 auto; }
-    section#power-brand > div.con > .row:first-child > div.cell.img-box {
-      -webkit-box-ordinal-group: 2;
-          -ms-flex-order: 1;
-              order: 1;
-      max-width: 550px;
-      margin: 0 auto; }
-      section#power-brand > div.con > .row:first-child > div.cell.img-box > img {
-        -webkit-transform: translateX(-43px);
-                transform: translateX(-43px); }
-    section#power-brand > div.con > .row:first-child > div.cell.text-box {
-      -webkit-box-ordinal-group: 1;
-          -ms-flex-order: 0;
-              order: 0;
-      margin-bottom: 10px; }
-      section#power-brand > div.con > .row:first-child > div.cell.text-box > .title {
-        font-size: 3rem;
-        font-weight: 700;
-        letter-spacing: 0.03em; }
-        section#power-brand > div.con > .row:first-child > div.cell.text-box > .title > span {
-          font-weight: 400; }
-      section#power-brand > div.con > .row:first-child > div.cell.text-box > p {
-        font-size: 1.6rem;
-        padding: 2em 0; }
-    section#power-brand > div.con > .row:nth-child(2) {
-      margin: 250px 0; }
-      section#power-brand > div.con > .row:nth-child(2) > div.cell {
-        padding-right: 20px; }
-        section#power-brand > div.con > .row:nth-child(2) > div.cell.img-box {
-          -ms-flex-preferred-size: 50%;
-              flex-basis: 50%; }
-          section#power-brand > div.con > .row:nth-child(2) > div.cell.img-box > img {
-            border-radius: 50px; }
-        section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box {
-          text-align: left;
-          padding: 0 50px; }
-          section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row {
-            padding: 30px 0; }
-            section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > .title {
-              font-weight: 400;
-              font-size: 3rem; }
-              section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > .title::after {
-                display: none; }
-              section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > .title > span {
-                font-weight: 700; }
-            section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > p {
-              font-size: 1.6rem;
-              margin-top: 1.9rem; }
-    section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box {
-      -webkit-box-ordinal-group: 1;
-          -ms-flex-order: 0;
-              order: 0;
-      margin-bottom: 10px; }
-      section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box > .title {
-        font-size: 3rem;
-        font-weight: 700;
-        letter-spacing: 0.03em; }
-        section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box > .title > span {
-          font-weight: 400; }
-      section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box > p {
-        font-size: 1.6rem;
-        padding: 2em 0; }
-    section#power-brand > div.con > .row:nth-child(3) > div.cell.img-box {
-      max-width: 550px;
-      -webkit-box-ordinal-group: 2;
-          -ms-flex-order: 1;
-              order: 1; }
-      section#power-brand > div.con > .row:nth-child(3) > div.cell.img-box > img {
-        -webkit-transform: translateX(-43px);
-                transform: translateX(-43px); }
-    section#power-brand > div.con > .row:last-child {
-      margin: 100px 0 0 0; }
-      section#power-brand > div.con > .row:last-child > .sub-description {
-        padding-top: 25px; }
-      section#power-brand > div.con > .row:last-child > .link-btn {
-        margin-top: 0; }
+    section#power-brand > div.con > .row {
+      opacity: 0;
+      -webkit-transform: translateY(50px);
+              transform: translateY(50px);
+      -webkit-transition: opacity 0.7s, -webkit-transform 1s;
+      transition: opacity 0.7s, -webkit-transform 1s;
+      transition: opacity 0.7s, transform 1s;
+      transition: opacity 0.7s, transform 1s, -webkit-transform 1s; }
+      section#power-brand > div.con > .row.on {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+                transform: translateY(0); }
+      section#power-brand > div.con > .row:first-child > div.cell.img-box {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1;
+        max-width: 550px;
+        margin: 0 auto; }
+        section#power-brand > div.con > .row:first-child > div.cell.img-box > img {
+          -webkit-transform: translateX(-43px);
+                  transform: translateX(-43px); }
+      section#power-brand > div.con > .row:first-child > div.cell.text-box {
+        -webkit-box-ordinal-group: 1;
+            -ms-flex-order: 0;
+                order: 0;
+        margin-bottom: 10px; }
+        section#power-brand > div.con > .row:first-child > div.cell.text-box > .title {
+          font-size: 3rem;
+          font-weight: 700;
+          letter-spacing: 0.03em; }
+          section#power-brand > div.con > .row:first-child > div.cell.text-box > .title > span {
+            font-weight: 400; }
+        section#power-brand > div.con > .row:first-child > div.cell.text-box > p {
+          font-size: 1.6rem;
+          padding: 2em 0; }
+      section#power-brand > div.con > .row:nth-child(2) {
+        margin: 250px 0; }
+        section#power-brand > div.con > .row:nth-child(2) > div.cell {
+          padding-right: 20px; }
+          section#power-brand > div.con > .row:nth-child(2) > div.cell.img-box {
+            -ms-flex-preferred-size: 50%;
+                flex-basis: 50%; }
+            section#power-brand > div.con > .row:nth-child(2) > div.cell.img-box > img {
+              border-radius: 50px; }
+          section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box {
+            text-align: left;
+            padding: 0 50px; }
+            section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row {
+              padding: 30px 0; }
+              section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > .title {
+                font-weight: 400;
+                font-size: 3rem; }
+                section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > .title::after {
+                  display: none; }
+                section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > .title > span {
+                  font-weight: 700; }
+              section#power-brand > div.con > .row:nth-child(2) > div.cell.text-box > .row > p {
+                font-size: 1.6rem;
+                margin-top: 1.9rem; }
+      section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box {
+        -webkit-box-ordinal-group: 1;
+            -ms-flex-order: 0;
+                order: 0;
+        margin-bottom: 10px; }
+        section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box > .title {
+          font-size: 3rem;
+          font-weight: 700;
+          letter-spacing: 0.03em; }
+          section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box > .title > span {
+            font-weight: 400; }
+        section#power-brand > div.con > .row:nth-child(3) > div.cell.text-box > p {
+          font-size: 1.6rem;
+          padding: 2em 0; }
+      section#power-brand > div.con > .row:nth-child(3) > div.cell.img-box {
+        max-width: 550px;
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; }
+        section#power-brand > div.con > .row:nth-child(3) > div.cell.img-box > img {
+          -webkit-transform: translateX(-43px);
+                  transform: translateX(-43px); }
+      section#power-brand > div.con > .row:last-child {
+        margin: 100px 0 0 0; }
+        section#power-brand > div.con > .row:last-child > .sub-description {
+          padding-top: 25px; }
+        section#power-brand > div.con > .row:last-child > .link-btn {
+          margin-top: 0; }
 
 section#introduction > div.con {
   max-width: 1280px;
